@@ -1,4 +1,4 @@
-dev=False
+dev=True
 #librairies
 from ast import Store
 import os #la base;)
@@ -10,13 +10,13 @@ import sys#Bah...
 from sys import *#Bah c'est sys
 #/////////////C++ = BAD :)
 #Composants
-BIOS = "BIOS" #UEFI/REFI/BIOS/UEFI CSM
-Ram =  4 # X GO ex: 2 GO
+BIOS = "refi" #UEFI/REFI/BIOS/UEFI CSM
+Ram =  256 # X GO ex: 2 GO
 ####VAR POUR LE BON FONCTIONNEMENNT IZ OS A NE PAS TOUCHER !###########
-izos = ""
-username = "" 
+izos = "booted"
+username = "root" 
 mdp =""
-ComputerName = ""
+ComputerName = "[Kernel.DEBUGSYS]"
 hlp = ['Store','listdir','shutdwn','calculatrice','GTAV','assembler','txtv2']
 GTAV = False
 calculator = False
@@ -40,38 +40,8 @@ def sprint(str):#ca c'est pour le slowprint
      sys.stdout.flush()
      sleep(1/10)
 
-def wait(time):#cest du C :)
+def wait(time):#cest du (Nan c'est pas marrant :( ))C :)
     sleep(time)
-#configuration
-sprint("Bienvenue sur IZ OS !--")
-username = str(input("Choissiez un nom d'utilistaeur :"))
-sprint(username)
-sprint("Très beau nom !")
-mdp = input("Saissisez un mot de passe (mdp):")
-sprint("Très beau Mot De Passe!")
-ComputerName=input("Entrez un Nom de machine:")
-sprint("OK Récapitulatif")
-print("Nom = "+username+"")
-wait(2)
-print("Nom de machine = "+ComputerName+"")
-wait(2)
-print("MDP = "+mdp+"")
-wait(3)
-conf = input("Vous etes sur de poursuivre l'installation ? (O/N):")
-if conf == "O" or conf == "o" or conf == "Y" or conf == "y":
-    print("PARFAIT !")
-    boot()
-    prgsbr(166 , 3)
-    prgsbr(1252, 1/10)
-    boot()
-else:
-    boot()
-    
-                                    
-        
-
-boot()
-boot()
 izos = "booted"
 #C'est PARTI !*
 #login 1
@@ -157,7 +127,7 @@ while izos == "booted":
                 calculator = True
             else:
                 sprint("Déja installé")
-        if choixStore == "TXT CREATORv2":
+        if choixStore == "txt":
             def txt():
                 txt = True
                 while txt == True:
