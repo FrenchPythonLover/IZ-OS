@@ -3,7 +3,7 @@ from rich.prompt import Prompt
 import os
 console = Console(color_system="truecolor")
 from rich import print
-version = "IZOS VERSION 5"
+version = 5.2
 def klog(text):
     print(f"[ KERNEL ] {text}")
 user = "root"
