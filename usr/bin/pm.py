@@ -4,14 +4,14 @@ sys.path.append("../lib")
 import base
 from base import print
 try:
-    arg = shell[1]
+    arg = args[1]
     try:
-        if shell[1] == "-s" or shell[1][1] == "-":
-            print(f"Saving {shell[3]}.py using custom repo {shell[2]}..")
-            urllib.request.urlretrieve(f"{shell[2]}{shell[3]}.py", f"usr/bin/{shell[3]}.py")
+        if args[1] == "-s" or args[1][1] == "-":
+            print(f"Saving {args[3]}.py using custom repo {args[2]}..")
+            urllib.request.urlretrieve(f"{args[2]}{args[3]}.py", f"usr/bin/{args[3]}.py")
         else:
-            print(f"Saving {shell[1]}...")
-            urllib.request.urlretrieve(f"https://raw.githubusercontent.com/FrenchPythonLover/IZOSAPPS/main/{shell[1]}.py", f"usr/bin/{shell[1]}.py")
+            print(f"Saving {args[1]}...")
+            urllib.request.urlretrieve(f"https://raw.githubusercontent.com/FrenchPythonLover/IZOSAPPS/main/{args[1]}.py", f"usr/bin/{args[1]}.py")
     except Exception as e:
         print(f"[red bold]ERROR: No such file ! ({e})")
 except:

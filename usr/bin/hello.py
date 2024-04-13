@@ -11,10 +11,10 @@ helpstr = """
 """
 
 try:
-    arg = shell[1]
-    if arg == "-h" or shell[1] == "--help":
+    arg = args[1]
+    if arg == "-h" or arg == "--help":
         print(helpstr)
-    if arg == "-v" or shell[1] == "--version":
+    if arg == "-v" or arg == "--version":
         print("[blue]HellPy v1.0")
     if arg == "--izos-version":
         print(version)
