@@ -3,23 +3,20 @@ from rich.prompt import Prompt
 import os
 console = Console(color_system="truecolor")
 from rich import print
-version = 5.2
+version = 5.3
 def klog(text):
     print(f"[ KERNEL ] {text}")
 user = "root"
 netname = "izos"
-# commands = ["ls","cls","clear","help"]
+commands2 = ["ls","cls","clear","help"]
 creds = "IZOS V5 1 by ilyes"
 
 def ls(args, directory):
-    dir_path = args[1] if args[1] != "/" else "./"
-
-    try:
-        dir_list = os.listdir(dir_path)
-        print("\n".join(dir_list))
-    except:
-        dir_list = os.listdir(dir_path if args[1] != "/" else directory)
-        print("\n".join(dir_list))
+            try:
+                dr = os.listdir(args[1].replace("./","/").replace("/","./"))
+                print(dr[::1])
+            except:
+                print(os.listdir(directory.replace("/","./")))
 
 COMMANDS = [
     {

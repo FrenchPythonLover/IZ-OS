@@ -62,10 +62,10 @@ while True:#After boot code: The "real" system
     #     except Exception as e:
     #         print("[red]ERROR: please specify directory")
     #         print(e)
-    if COMMANDS.__contains__(cmd_name) == False:
+    if commands2.__contains__(cmd_name) == False:
         try:
             with open(f"./usr/bin/{cmd_name}.py", "r") as bin:
                 exec(bin.read())
-        except:
+        except Exception as e:
             print("[red]Error: No such executable file found.")
     
