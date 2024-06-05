@@ -1,1 +1,1 @@
-py ./kernel.py
+python3 ./kernel.py
