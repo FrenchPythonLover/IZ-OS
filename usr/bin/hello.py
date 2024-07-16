@@ -1,4 +1,7 @@
+import sys
+import os
 sys.path.append("../lib/")
+import base
 helpstr = """
 [blue bold underlined]HelloPy v1: An IZOS utility[/blue bold underlined]
 [green]Commands:[/green]
@@ -12,10 +15,10 @@ try:
     if arg == "-h" or arg == "--help":
         print(helpstr)
     if arg == "-v" or arg == "--version":
-        print("[blue]HelloPy v1.0")
+        print("[blue]HellPy v1.1")
     if arg == "--izos-version":
         print(version)
     if arg == "--lsbin" or arg == "--list-bin":
-        print('\n'.join(os.listdir("usr/bin/")))
+        print(os.listdir("usr/bin/"))
 except:
     print(helpstr + "[red]Error: Please specify a argument !")

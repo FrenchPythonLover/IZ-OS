@@ -3,12 +3,9 @@ sys.path.append("../lib/")
 import base
 import os
 try:
-    print(f"[red bold]Deleting {args[1]}.py...")
+    print(f"[red bold]Deleting {shell[1]}.py...")
     try:
-        if args[1] == "delbin" or args[1] == "pm":
-            print("[red]You cannot delete system files ! :)")
-            exit()
-        os.remove(f"usr/bin/{args[1]}.py")
+        os.remove(f"usr/bin/{shell[1]}.py")
         
     except Exception as e:
         print("[red bold]No such file !")

@@ -1,0 +1,3 @@
+Hello,
+This document is rendered using cat !
+(just read() function from python)
