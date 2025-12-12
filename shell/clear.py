@@ -1,0 +1,1 @@
+os.system("cls" if os.name == "nt" else "clear") # Just clear out the terminal, and adapt the shell command in function of the os.
